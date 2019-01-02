@@ -7,7 +7,9 @@ or type "pip install easySocket" into your terminal window
 Right now it can do the following:
 
 	-Host a tcp connection with one function:			host_tcp(my_ip, port)
+	(This also returns the client as a socket.socket variable)
 	-Connect to a tcp conenction with one function:			connect_tcp(ip, port)
+	(This also returns the server as a socket.socket variable)
 	-Send a file over a tcp connection independent of size:		send_file(location, recipient)
 	-Send a file over a tcp connection independent of size:		send_text(text, recipient)
 	-Aswell as receiving the data send by those two functions:	rcv_data(sender)
