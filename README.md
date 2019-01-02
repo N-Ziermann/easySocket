@@ -1,7 +1,8 @@
 # easySocket
 "easySocket" is a module for Python that's based on the "socket" module and aims to make tasks like sending long texts or files easier/simpler.
 
-To install it, just put the .py file into your Python module directory (/path/to/your/pythonfolder/Lib/site-packages)
+To install it, just put the .py file into your Python module directory (/path/to/your/pythonfolder/Lib/site-packages) 
+or type "pip install easySocket" into your terminal window
 
 Right now it can do the following:
 
