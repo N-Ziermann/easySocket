@@ -3,7 +3,7 @@ import socket
 # Setting up the connection:
 
 
-def host_tcp(my_ip, port=12345):     # hosts a TCP connection and waits for client
+def host_tcp(my_ip="0.0.0.0", port=12345):     # hosts a TCP connection and waits for client
     s = socket.socket()
     s.bind((my_ip, port))
     s.listen(5)
@@ -24,7 +24,7 @@ def send_file(location, recipient):       # makes it possible to send images
         file = open(location, "rb").read()
         send_repeat(file, recipient)
     else:
-        print("ERROR: Recipient needs to be of the type: socket.socket")
+        raise Exception("Recipient needs to be of the type: socket.socket")
         quit()
 
 
@@ -33,7 +33,7 @@ def send_text(text, recipient):           # makes it possible to send texts bigg
         byte_text = text.encode()
         send_repeat(byte_text, recipient)
     else:
-        print("ERROR: Recipient needs to be of the type: socket.socket")
+        raise Exception("Recipient needs to be of the type: socket.socket")
         quit()
 
 
@@ -60,7 +60,7 @@ def rcv_data(sender):   # returns data send from other site in byte format(indep
         sender.send("Received".encode())        # tells the sender that everything arrived
         return data
     else:
-        print("ERROR: Sender needs to be of the type: socket.socket")
+        raise Exception("Sender needs to be of the type: socket.socket")
         quit()
 
 
