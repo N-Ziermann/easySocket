@@ -5,6 +5,20 @@
 
 I wrote this module, because I wanted to send an image with the socket module and found it annoying to always spend multiple lines of code to be able to send an image that was bigger than the maximum amount of bytes sendable with one socket.send command.
 
+
+
+## Example
+
+```python
+import easySocket
+c = host_tcp("0.0.0.0", 8000)
+easySocket.send_file("./flower.png", c)
+```
+
+This is all you need to do to send an image file using easySocket
+
+
+
 ## Install
 
 ```shell
