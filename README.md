@@ -1,5 +1,5 @@
 # easySocket
-**Version 1.0.0**
+**Version 1.0.3**
 
 "easySocket" is a module for Python that's based on the "socket" module and aims to make tasks like sending long texts or files easier/simpler.
 
