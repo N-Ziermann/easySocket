@@ -11,7 +11,7 @@ I wrote this module, because I wanted to send an image with the socket module an
 
 ```python
 import easySocket
-c = host_tcp("0.0.0.0", 8000)
+c = easySocket.host_tcp("0.0.0.0", 8000)
 easySocket.send_file("./flower.png", c)
 ```
 
